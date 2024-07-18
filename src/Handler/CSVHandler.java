@@ -37,7 +37,8 @@ public class CSVHandler<T> {
     public void guardar(List<T> items) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(csvFile))) {
             for (T item : items) {
-                writer.println(convertToCSV(item));
+                String csvLine = convertToCSV(item);
+                writer.println(csvLine);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -74,7 +75,11 @@ public class CSVHandler<T> {
         for (Field field : item.getClass().getDeclaredFields()) {
             field.setAccessible(true);
             try {
-                sb.append(field.get(item)).append(",");
+                Object value = field.get(item);
+                if (value != null) {
+                    sb.append(value.toString());
+                }
+                sb.append(",");
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }

@@ -34,8 +34,15 @@ public class UsuarioService {
         return usuarios.stream().mapToInt(Usuario::getId).max().orElse(0) + 1;
     }
 
-    public void agregarUsuario(String nombre, String email, String contraseña) {
-        Usuario usuario = new Usuario(currentId++, nombre, email, contraseña);
+    public void agregarUsuario(String nombre, String correo, String contraseña) {
+        Usuario usuario = new Usuario(currentId++, nombre,contraseña, correo);
+
+        //validamos si no hay un usuario con el mismo nombre o correo
+        if (usuarios.stream().anyMatch(u -> u.getUsuario().equals(nombre) || u.getCorreo().equals(correo))) {
+            //generemos una excepcion si el usuario ya existe
+            throw new IllegalArgumentException("El usuario ya existe o el correo ya esta registrado");
+        }
+        
         usuarios.add(usuario);
         csvHandler.guardar(usuarios);
     }
@@ -44,8 +51,8 @@ public class UsuarioService {
         for (Usuario usuario : usuarios) {
             if (usuario.getId() == id) {
                 usuario.setUsuario(nuevoNombre);
-                usuario.setCorreo(nuevoEmail);
                 usuario.setContraseña(nuevaContraseña);
+                usuario.setCorreo(nuevoEmail);
                 csvHandler.guardar(usuarios);
                 break;
             }
