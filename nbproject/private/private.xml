@@ -3,10 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Handler/CSVHandler.java</file>
+            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Methods/Ordena.java</file>
+            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Views/FrameUsuarios.java</file>
+            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Views/FrameFavoritos.java</file>
+            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Methods/Busca.java</file>
+            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Views/FramePelículas.java</file>
+            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Arbol/NodoArbol.java</file>
+            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Class/Actores.java</file>
+            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Views/FrameActores.java</file>
+            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Class/Busqueda.java</file>
             <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Class/Usuario.java</file>
             <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Views/Login.java</file>
-            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Views/FramePelículas.java</file>
-            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Main/Main.java</file>
+            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Arbol/ArbolBinarioBusqueda.java</file>
+            <file>file:/D:/UTP/ALGORITMOS/FInal/Peliculas-V3/src/Servicios/UsuarioService.java</file>
         </group>
     </open-files>
 </project-private>

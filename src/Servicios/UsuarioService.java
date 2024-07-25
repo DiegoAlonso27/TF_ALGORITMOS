@@ -42,7 +42,7 @@ public class UsuarioService {
             //generemos una excepcion si el usuario ya existe
             throw new IllegalArgumentException("El usuario ya existe o el correo ya esta registrado");
         }
-        
+
         usuarios.add(usuario);
         csvHandler.guardar(usuarios);
     }
@@ -69,12 +69,7 @@ public class UsuarioService {
     }
 
     public boolean validarCredenciales(String nombreUsuario, String contraseña) {
-        System.out.println("Validando: " + nombreUsuario + " " + contraseña);
-        boolean resultado = usuarios.stream().anyMatch(usuario -> usuario.getUsuario().equals(nombreUsuario) && usuario.getContraseña().equals(contraseña));
-        // imprimo la lista de usuarios
-        usuarios.forEach(usuario -> System.out.println(usuario.getUsuario() + " " + usuario.getContraseña()));
-        System.out.println("Resultado: " + resultado);
-        return resultado;
+        return usuarios.stream().anyMatch(usuario -> usuario.getUsuario().equals(nombreUsuario) && usuario.getContraseña().equals(contraseña));
     }
 
 }
